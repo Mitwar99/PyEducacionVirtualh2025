@@ -1,0 +1,31 @@
+<section class="relative w-full overflow-hidden">
+  <div class="flex w-full h-64 md:h-96 relative" id="slider">
+      <img src="../../../../assets/images/mikaf.jpg" alt="Slide 1" class="w-full h-full object-cover absolute">
+      <img src="./imagenes/mikaf.jpg" alt="Slide 2" class="w-full h-full object-cover absolute hidden">
+      <img src="imagenes/mikaf.jpg" alt="Slide 3" class="w-full h-full object-cover absolute hidden">
+  </div>
+</section>
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('#slider img');
+  setInterval(() => {
+      slides[currentIndex].classList.add('hidden');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.remove('hidden');
+  }, 3000);
+</script>
+
+<section class="flex flex-col lg:flex-row items-center justify-between p-12">
+  <div class="lg:w-1/2">
+      <h1 class="text-4xl font-bold text-blue-900">Capacitate<br> Con Nosotros Ahora</h1>
+      <p class="text-gray-600 mt-4">Realiza diplomados, cursos de especialización para la comunidad DREMO y el público en general.</p>
+      <button class="mt-6 bg-pink-600 text-white px-6 py-3 rounded-lg flex items-center">
+          Ver cursos
+          <span class="ml-2">➡</span>
+      </button>
+  </div>
+  <div class="lg:w-1/2 flex justify-center">
+      <img src="illustration.png" alt="Educación" class="w-3/4">
+  </div>
+</section>
+<app-quienes-somos></app-quienes-somos>

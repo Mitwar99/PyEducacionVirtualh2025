@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { QuienesSomosComponent } from './paginas/quienes-somos/quienes-somos.component';
+
+import { HeaderComponent } from './paginas/inicio/header/header.component';
+import { FooterComponent } from './paginas/inicio/footer/footer.component';
+import { BodyComponent } from './paginas/inicio/body/body.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [RouterOutlet,QuienesSomosComponent],
+  imports: [
+              RouterOutlet,
+              HeaderComponent, FooterComponent,
+              BodyComponent
+  ],
 })
 export class AppComponent {
   title = 'PyEducacionVirtualh2025';

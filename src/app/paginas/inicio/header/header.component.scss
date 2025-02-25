@@ -1,0 +1,9 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; /* Ajusta según el diseño */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para efecto flotante */
+  }
