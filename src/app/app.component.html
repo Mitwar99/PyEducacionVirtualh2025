@@ -1,1 +1,37 @@
-<h1>hola</h1>
+<header class="bg-white shadow-md py-4 px-8 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+        <img src="logo.png" alt="Logo" class="h-10">
+        <span class="font-bold text-lg text-blue-800">CENTRO DE FORMACIÓN CONTINUA</span>
+    </div>
+    <nav class="hidden md:flex space-x-6">
+        <ul class="flex space-x-6">
+            <li><a href="#" class="text-pink-600 font-semibold">Inicio</a></li>
+            <li><a href="#" class="text-gray-700">Sobre nosotros</a></li>
+            <li><a href="#" class="text-gray-700">Cursos</a></li>
+            <li><a href="#" class="text-gray-700">Ya me inscribí</a></li>
+        </ul>
+    </nav>
+    <button class="md:hidden block text-gray-700" onclick="toggleMenu()">☰</button>
+</header>
+<nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-4 px-8 w-full absolute top-16 left-0 flex flex-col space-y-4">
+    <a href="#" class="text-pink-600 font-semibold">Inicio</a>
+    <a href="#" class="text-gray-700">Sobre nosotros</a>
+    <a href="#" class="text-gray-700">Cursos</a>
+    <a href="#" class="text-gray-700">Ya me inscribí</a>
+</nav>
+
+<section class="flex flex-col lg:flex-row items-center justify-between p-12">
+    <div class="lg:w-1/2">
+        <h1 class="text-4xl font-bold text-blue-900">Capacitate<br> Con Nosotros Ahora</h1>
+        <p class="text-gray-600 mt-4">Realiza diplomados, cursos de especialización para la comunidad DREMO y el público en general.</p>
+        <button class="mt-6 bg-pink-600 text-white px-6 py-3 rounded-lg flex items-center">
+            Ver cursos
+            <span class="ml-2">➡</span>
+        </button>
+    </div>
+    <div class="lg:w-1/2 flex justify-center">
+        <img src="illustration.png" alt="Educación" class="w-3/4">
+    </div>
+</section>
+<app-quienes-somos>
+</app-quienes-somos>
