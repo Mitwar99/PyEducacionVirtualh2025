@@ -4,6 +4,8 @@ import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { ProductService } from '../../../../service/productservice';
 import { Product } from '../../../../domain/product';
+import { PrimengModule } from '../../../primeng.module';
+
 
 @Component({
   selector: 'app-mis-cursos',
@@ -11,7 +13,7 @@ import { Product } from '../../../../domain/product';
   templateUrl: './mis-cursos.component.html',
   styleUrls: ['./mis-cursos.component.scss'],
   imports:[ CarouselModule, ButtonModule,
-            TagModule
+            TagModule,PrimengModule
   ],
   providers: [ProductService]
 })
