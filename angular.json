@@ -27,7 +27,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",              
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": []
           },
@@ -85,7 +87,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
