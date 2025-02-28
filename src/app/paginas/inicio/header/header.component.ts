@@ -9,25 +9,25 @@ import { PhotoService } from '../../../../service/photoservice';
   providers:[PhotoService]
 })
 export class HeaderComponent implements OnInit {
-  images: any[] = [];
+  // images: any[] = [];
 
-    responsiveOptions: any[] = [
-        {
-            breakpoint: '1300px',
-            numVisible: 4
-        },
-        {
-            breakpoint: '575px',
-            numVisible: 1
-        }
-    ];
+  //   responsiveOptions: any[] = [
+  //       {
+  //           breakpoint: '1300px',
+  //           numVisible: 4
+  //       },
+  //       {
+  //           breakpoint: '575px',
+  //           numVisible: 1
+  //       }
+  //   ];
 
   constructor(private photoService: PhotoService) { }
   
   ngOnInit() {
-    this.photoService.getImages().then((images) => {
-      this.images = images; // Asignación correcta
-    });
+    // this.photoService.getImages().then((images) => {
+    //   this.images = images; // Asignación correcta
+    // });
 }
 
 }
