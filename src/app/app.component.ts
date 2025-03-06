@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// import { RouterOutlet } from '@angular/router';
 import { MessageService } from 'primeng/api';
 
 import { HeaderComponent } from './paginas/inicio/header/header.component';
@@ -11,7 +11,7 @@ import { BodyComponent } from './paginas/inicio/body/body.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   imports: [
-              RouterOutlet,
+              
               HeaderComponent, FooterComponent,
               BodyComponent
   ],
