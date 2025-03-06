@@ -1,0 +1,42 @@
+<section class="relative w-full overflow-hidden">
+  <div class="flex w-full h-64 md:h-96 relative" id="slider">
+      <img src="icons/imagen02.jpg" alt="Slide 1" class="w-full h-full object-cover absolute">
+      <img src="icons/mikaf.jpg" alt="Slide 2" class="w-full h-full object-cover absolute hidden">
+      <img src="icons/imagen02.jpg" alt="Slide 3" class="w-full h-full object-cover absolute hidden">
+  </div>
+</section>
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('#slider img');
+  setInterval(() => {
+      slides[currentIndex].classList.add('hidden');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.remove('hidden');
+  }, 3000);
+</script>
+<section>
+  <div class="grid">
+    <div class="col-8">
+      <div class="ml-6 pt-8 pb-2">
+        <div>
+          <p class="stilo font-bold">Potencia tu enseñanza, transforma el futuro. 
+            ¡Capacítate hoy y marca la diferencia!</p>
+        </div>
+        <div>
+          <p class="text-justify text-gray-700 leading-relaxed py-5">
+            La Dirección Regional de Educación realiza diplomados, cursos de especialización para la comunidad educativa de la Región Moquegua.
+          </p>
+        </div>
+        <div>
+          <p-button label="Ver Curso" icon="pi pi-address-book" iconPos="right" class="font-bold" />
+        </div>
+      </div>
+    </div>
+    <div class="col-4 align-content-center">
+      <div class="m-3">
+        <img src="capacitate/pngConv.png" alt="">
+      </div>
+      
+    </div>
+  </div>
+</section>

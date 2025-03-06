@@ -1,20 +1,5 @@
-<section class="relative w-full overflow-hidden">
-  <div class="flex w-full h-64 md:h-96 relative" id="slider">
-      <img src="icons/imagen02.jpg" alt="Slide 1" class="w-full h-full object-cover absolute">
-      <img src="icons/mikaf.jpg" alt="Slide 2" class="w-full h-full object-cover absolute hidden">
-      <img src="icons/imagen02.jpg" alt="Slide 3" class="w-full h-full object-cover absolute hidden">
-  </div>
-</section>
-<script>
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('#slider img');
-  setInterval(() => {
-      slides[currentIndex].classList.add('hidden');
-      currentIndex = (currentIndex + 1) % slides.length;
-      slides[currentIndex].classList.remove('hidden');
-  }, 3000);
-</script>
 
+<app-sliders></app-sliders>
 <section class="flex flex-col lg:flex-row items-center justify-between p-12 backcolor01">
   <div class="grid col">
     <div class="col-12 md:col-4">
