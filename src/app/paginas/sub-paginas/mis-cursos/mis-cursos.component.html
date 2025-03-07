@@ -17,15 +17,20 @@
         </ng-template>
     </p-card>
 </div> -->
-<div>
+<section class="flex flex-col lg:flex-row items-center justify-between p-4">
+    <div class="">
+        <h1 class="text-4xl font-bold text-blue-900">Próximos cursos...</h1>
+    </div>
+</section>
 
-</div>
-<div class="mb-4 p-8 flex flex-wrap gap-4 justify-center">
+<div class="mb-4 p-3 flex flex-wrap gap-4 justify-center">
+    
     <p-card 
         *ngFor="let curso of cursos" 
-        [style]="{ width: '29rem', overflow: 'hidden', height: '33rem'  }" class="cardd">
+        [style]="{ width: '29rem', overflow: 'hidden', height: '34rem'}">
         
         <ng-template #header>
+            <span class="tag mt-5 rounded-r-lg text-xl font-bold">Educación Inicial</span>
             <img [src]="curso.imagen" alt="Card" class="w-full" />
         </ng-template>
 
@@ -57,9 +62,9 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="text-center align-content-end">
-                <p-button label="Inscribirse" class="" [outlined]="true" />
+        <div class="col-12 ">
+            <div class="text-center">
+                <p-button label="Inscribirse" class="w-full" [outlined]="true" />
             </div>
             
         </div>

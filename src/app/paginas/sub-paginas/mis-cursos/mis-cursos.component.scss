@@ -1,5 +1,20 @@
+// estilo del borde de los card
 :host ::ng-deep .p-card {
     background-color: white;
     color: black;
     box-shadow: 5px 5px 10px gray;
+}
+// estilo del boton de los cursos
+:host ::ng-deep .p-ripple{
+    background-color: #3E67A9;
+    box-shadow: 0px 5px 1px #0E4194;
+    color: white;
+    border-color: #3E67A9;
+    width: 40%;
+}
+.tag{
+    position: absolute;
+    background-color: #A51C2E;
+    color: white;
+    padding: 5px 7px;
 }
