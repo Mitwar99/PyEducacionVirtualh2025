@@ -18,51 +18,38 @@ import { PrimengModule } from '../../../primeng.module';
   providers: [ProductService]
 })
 export class MisCursosComponent implements OnInit {
-  products: Product[] = [];
-  responsiveOptions: any[] | undefined;
+  cursos = [
+    {
+      titulo: 'Diplomado: Estrategias Innovadoras para la Educación Inicial',
+      subtitulo: 'Formación en educación inicial',
+      descripcion: 'Este diplomado ofrece herramientas y metodologías innovadoras para fortalecer la enseñanza en educación inicial...',
+      imagen: 'capacitate/recursos/imagenProf.jpg'
+    },
+    {
+      titulo: 'Diplomado en Educación Digital',
+      subtitulo: 'Uso de tecnología en el aula',
+      descripcion: 'Aprende a integrar herramientas digitales en la enseñanza y mejorar la experiencia educativa de los estudiantes...',
+      imagen: 'capacitate/recursos/imagenDisc.jpg'
+    },
+    {
+      titulo: 'Diplomado en Psicopedagogía',
+      subtitulo: 'Atención a la diversidad',
+      descripcion: 'Desarrolla estrategias psicopedagógicas para mejorar el aprendizaje de niños con diferentes necesidades...',
+      imagen: 'capacitate/recursos/imagenCharl.jpg'
+    },
+    {
+      titulo: 'Diplomado en Psicopedagogía',
+      subtitulo: 'Atención a la diversidad',
+      descripcion: 'Desarrolla estrategias psicopedagógicas para mejorar el aprendizaje de niños con diferentes necesidades...',
+      imagen: 'capacitate/recursos/imagenCharl.jpg'
+    }
+  ];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.productService.getProductsSmall().then((products) => {
-      this.products = products;
-  });
+    
+  }
 
-  this.responsiveOptions = [
-      {
-          breakpoint: '1400px',
-          numVisible: 3,
-          numScroll: 3
-      },
-      {
-          breakpoint: '1220px',
-          numVisible: 2,
-          numScroll: 2
-      },
-      {
-          breakpoint: '1100px',
-          numVisible: 1,
-          numScroll: 1
-      }
-  ];
-  }
-  getSeverity(status: string){
-    switch(status){
-      case 'INSTOCK':
-        const nn = 'succes'
-        console.log("hola", nn);
-      break
-    }
-  }
-//   getSeverity(status: string) {
-//     switch (status) {
-//         case 'INSTOCK':
-//             return 'success';
-//         case 'LOWSTOCK':
-//             return 'warning';
-//         case 'OUTOFSTOCK':
-//             return 'danger';
-//     }
-// }
 
 }

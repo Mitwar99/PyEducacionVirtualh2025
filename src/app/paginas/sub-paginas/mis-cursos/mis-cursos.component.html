@@ -1,53 +1,73 @@
-<div class=" card back-color">
-    <section class="flex flex-col lg:flex-row items-center justify-between p-12">
-        <div class="lg:w-1/2">
-            <h1 class="text-4xl font-bold text-blue-900">Nuestros Cursos</h1>
-                        
-        </div>
-        
-    </section>
-  <p-carousel 
-  [value]="products" 
-  [numVisible]="3" 
-  [numScroll]="1" 
-  [responsiveOptions]="responsiveOptions">
-      <ng-template let-product pTemplate="item">
-          <div class="grid  m-2 p-3">
-              <div class="mb-3">
-                  <div class="relative mx-auto">
-                      <img 
-                          src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
-                          [alt]="product.name" 
-                          class="w-full border-round" />                              
-        
-                  </div>
-                  <!-- <p-tag 
-                          [value]="product.inventoryStatus" 
-                          [severity]="getSeverity(product.inventoryStatus)" 
-                          class="absolute" 
-                          [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" /> -->
-              </div>
-              <div class="mb-3 font-medium">
-                  {{ product.name }}
-              </div>
-              <div>
-                <ul>
-                    <li>
-                        Clases: 28/02/2025 
-                    </li>
-                </ul>
-              </div>
-              <div class="grid h-full">
-                  <!-- <div class="mt-0 font-semibold text-xl">
-                      {{ '$' + product.price }}
-                      
-                  </div> -->
-                  <p-button label="Ingresar" class="self-end" />
-              </div>
-          </div>
-      </ng-template>
-</p-carousel>
+
+<!-- <div class="mb-4 p-8 flex items-center justify-center">
+    <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+        <ng-template #header>
+            <img alt="Card" class="w-full" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+        </ng-template>
+        <ng-template #title> Diplomado: Estrategias Innovadoras para la Educación Inicial </ng-template>
+        <ng-template #subtitle> Card subtitle </ng-template>
+        <p>
+            Este diplomado ofrece herramientas y metodologías innovadoras para fortalecer la enseñanza en educación inicial, abordando el desarrollo integral de los niños, la planificación pedagógica y el uso de recursos tecnológicos en el aula.
+        </p>
+        <ng-template #footer>
+            <div class="flex gap-4 mt-1">
+                <p-button label="Cancel" severity="secondary" class="w-full" [outlined]="true" styleClass="w-full" />
+                <p-button label="Save" class="w-full" styleClass="w-full" />
+            </div>
+        </ng-template>
+    </p-card>
+</div> -->
+<div>
+
 </div>
+<div class="mb-4 p-8 flex flex-wrap gap-4 justify-center">
+    <p-card 
+        *ngFor="let curso of cursos" 
+        [style]="{ width: '29rem', overflow: 'hidden', height: '33rem'  }" class="cardd">
+        
+        <ng-template #header>
+            <img [src]="curso.imagen" alt="Card" class="w-full" />
+        </ng-template>
+
+        <ng-template #title> 
+            <p class="text-center text-2xl">{{ curso.titulo }} </p>
+        </ng-template>
+        <!-- <ng-template #subtitle> {{ curso.subtitulo }} </ng-template> -->
+        <div class="grid">
+            <div class="col-7">
+                <p class="text-sm text-justify text-gray-800 leading-relaxed"> {{ curso.descripcion }} </p>
+            </div>
+            <div class="col-5">
+                <div class="">
+                    <i class="pi pi-calendar mr-1"></i>
+                    <samp class="text-xs text-gray-800 leading-relaxed">Lunes y Miercoles</samp>
+                    <!-- <p class="pLetra">lunes y Miercoles</p> -->
+                </div>
+                <div>
+                    <i class="pi pi-clock mr-1"></i>
+                    <samp class="text-xs text-gray-800 leading-relaxed">8:00 am a 12:00 pm</samp>
+                </div>
+                <div>
+                    <i class="pi pi-bell mr-1"></i>
+                    <samp class="text-xs text-gray-800 leading-relaxed">Docentes y Estudiantes</samp>
+                </div>
+                <div>
+                    <i class="pi pi-stopwatch mr-1"></i>
+                    <samp class="text-xs text-gray-800 leading-relaxed">90 horas</samp>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center align-content-end">
+                <p-button label="Inscribirse" class="" [outlined]="true" />
+            </div>
+            
+        </div>
+    </p-card>
+</div>
+
+
+
 
   
 
